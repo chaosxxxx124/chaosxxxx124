@@ -27,3 +27,16 @@ print (result)
 #{'red': 2, 'blue': 3, 'green': 1}
 
 enumerate()：将字典的key和value放一起返回成列表：[(key1,value1)(key2,value2)...]
+
+
+将一个字符串只保留字母和数字，且全部转为小写放进列表敌我答案对比：（麻烦的是我的）
+# s_list = list(s.lower())
+        # for i in range(len(s_list)-1,-1,-1):
+        #     # print(s_list[i])
+        #     if s_list[i].isalpha() or s_list[i].isdigit():
+        #         pass
+        #     else:
+        #         s_list.remove(s_list[i])
+        
+s_list = "".join(ch.lower() for ch in s if ch.isalnum())
+join(要放进目标列表的元素 for 元素 in 字符串 if 筛选条件)
